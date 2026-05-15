@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0071)file:///Users/rodrigoburger/Downloads/agro_indica_quality_report_5.html -->
+<!-- saved from url=(0071)file:///Users/rodrigoburger/Downloads/agro_indica_quality_report_6.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,70 +126,53 @@ textarea::placeholder{color:var(--t3);font-style:italic}
 .toast.show{opacity:1;transform:translateY(0)}
 .toast.err{background:var(--red)}
 @media print{
-  @page{
-    size: A4 portrait;
-    margin: 8mm 8mm 8mm 8mm;
-  }
-  *{ -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  html, body{ width:210mm; height:297mm; background:#fff; }
+  @page{ size: A4 landscape; margin: 8mm 10mm 8mm 10mm; }
+  *{ -webkit-print-color-adjust:exact!important; print-color-adjust:exact!important; }
+  html,body{ width:297mm; height:210mm; background:#fff; overflow:hidden; }
   .tb,.overlay,.toast{ display:none!important }
   .pw{ margin:0; padding:0; max-width:100%; }
-  .rpt{ border-radius:0; border:none; transform-origin: top left; }
-
-  /* Scale everything to fit A4 */
-  .rpt{
-    transform: scale(0.72);
-    transform-origin: top left;
-    width: calc(100% / 0.72);
-  }
-
-  /* Tighten spacing */
-  .rh{ padding: 10px 14px 8px; }
-  .lb svg{ width: 36px; height: 36px; }
-  .ln{ font-size: 14px; }
-  .ls{ font-size: 8px; }
-  .rt{ font-size: 9px; }
-  .rid{ font-size: 9px; margin-top: 1px; }
-  .sb .sc{ padding: 5px 10px; }
-  .sl{ font-size: 7px; margin-bottom: 2px; }
-  .sv input{ font-size: 10px; }
-  .sec{ padding: 8px 14px 0; }
-  .stit{ font-size: 7px; margin-bottom: 6px; }
-  .pg{ gap: 6px; }
-  .pc{ padding: 7px 9px; }
-  .plbl{ font-size: 9px; margin-bottom: 3px; }
-  .pv{ font-size: 15px; }
-  .pu{ font-size: 9px; }
-  .pref{ font-size: 8px; margin-top: 2px; }
-  .pbar{ margin-top: 4px; height: 2px; }
-  .ef{ font-size: 9px; margin-top: 3px; }
-  .rc{ padding: 7px 10px; gap: 10px; }
-  .rn{ font-size: 24px; }
-  .rl2{ font-size: 8px; }
-  .rv-ok, .rv-bad{ font-size: 10px; }
-  .trow{ gap: 8px; }
-  .tname{ font-size: 9px; width: 110px; }
-  .tbg{ height: 3px; }
-  .tval{ font-size: 9px; width: 30px; }
-  #terpene-list{ gap: 4px; }
-  .cg{ gap: 6px; }
-  .cc{ padding: 6px 9px; gap: 7px; }
-  .ci{ width: 20px; height: 20px; }
-  .ct{ font-size: 9px; margin-bottom: 1px; }
-  .cd, .cinput{ font-size: 9px; }
-  textarea{ min-height: 36px; padding: 6px 10px; font-size: 10px; }
-  .ft{ padding: 6px 14px; margin-top: 8px; }
-  .fn{ font-size: 8px; }
-  .fli{ font-size: 8px; }
-  .fleg{ gap: 8px; }
-  .sec[style*="padding:1.5rem 2rem"]{ padding: 8px 14px !important; }
-  .sec[style*="padding-top:1.5rem"]{ padding-top: 8px !important; }
-  /* Prevent any page breaks */
-  .rpt, .rh, .sb, .sec, .pg, .pc, .rc, .cg, .cc, .ft{
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  body{ overflow: hidden; }
+  .rpt{ border-radius:0; border:none; }
+  .rh{ padding:8px 14px 6px; }
+  .lb svg{ width:32px; height:32px; }
+  .ln{ font-size:13px; }
+  .ls{ font-size:7px; }
+  .rt{ font-size:8px; }
+  .rid{ font-size:8px; margin-top:1px; }
+  .sb{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .sc{ padding:4px 8px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .sl{ font-size:6px; margin-bottom:2px; }
+  .sv input{ font-size:8px; text-align:center; width:100%; }
+  .sec{ padding:6px 10px 0!important; }
+  .stit{ font-size:7px; margin-bottom:5px; }
+  .pg{ display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+  .pc{ padding:6px 8px; border-radius:5px; }
+  .plbl{ font-size:8px; margin-bottom:3px; }
+  .pv{ font-size:17px; }
+  .pu{ font-size:8px; }
+  .pref{ font-size:7px; margin-top:2px; }
+  .pbar{ margin-top:5px; height:3px; }
+  .ef{ font-size:8px; margin-top:3px; }
+  .rc{ padding:10px 14px; gap:12px; border-radius:6px; }
+  .rn{ font-size:32px; }
+  .rl2{ font-size:7px; margin-bottom:4px; }
+  .rv-ok,.rv-bad{ font-size:9px; }
+  .trow{ gap:8px; }
+  .tname{ font-size:8px; width:120px; }
+  .tbg{ height:4px; }
+  .tval{ font-size:8px; width:36px; }
+  #terpene-list{ gap:5px; }
+  .cg{ display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+  .cc{ padding:6px 8px; border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:3px; }
+  .ci{ width:22px; height:22px; font-size:12px; }
+  .ct{ font-size:8px; }
+  .cd,.cinput{ font-size:7.5px; }
+  textarea{ min-height:28px; padding:5px 8px; font-size:8px; }
+  .ft{ padding:5px 10px; margin-top:6px; }
+  .fn{ font-size:7px; }
+  .fli{ font-size:7px; }
+  .fleg{ gap:8px; }
+  .rpt{ transform:scale(0.78); transform-origin:top left; width:calc(100% / 0.78); }
+  .rpt,.rh,.sb,.sec,.pg,.pc,.rc,.cg,.cc,.ft{ page-break-inside:avoid; break-inside:avoid; }
 }
 </style>
 </head>
